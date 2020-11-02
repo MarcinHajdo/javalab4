@@ -12,7 +12,7 @@ public class Animal {
     }
     public Animal(IWorldMap map, Vector2d initialPosition){
         this.map = map;
-        this.position = initialPosition;
+        this.position = border(initialPosition);
     }
     public MapDirection getOrientation() {
         return this.orientation;
@@ -25,11 +25,11 @@ public class Animal {
             this.width = this.map.getWidth();
             this.height = this.map.getHeight();
         }
-        if (p.getY()>this.height)
+        if (p.getY()>=this.height)
         {
             p= p.subtract(new Vector2d(0,this.height));
         }
-        if (p.getX()>this.width)
+        if (p.getX()>=this.width)
         {
             p= p.subtract(new Vector2d(this.width,0));
         }
