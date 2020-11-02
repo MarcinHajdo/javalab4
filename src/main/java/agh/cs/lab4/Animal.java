@@ -85,11 +85,11 @@ public class Animal {
         };
 
     }
-    public String toString1() {
+   /* public String toString() {
         return "Animal{" +
                 "orientation=" + orientation +
                 ", position=" + position +
                 '}';
-    }
+    }*/
 }
 
